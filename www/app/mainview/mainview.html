@@ -1,0 +1,62 @@
+<ion-view class="back" animation="slide-left-right">
+	
+ 
+ 
+
+
+
+
+<ion-pane ng-controller="ContentController">
+        
+
+            <ion-side-menu-content>
+                
+                <ion-content>
+
+                    <div class="card">
+                        <div class="item item-text-wrap text-center">
+                            <h2>Daily Goal</h2>
+                            <h1>5 Salah Remaining</h1>
+                            <div id="main-prayer-banner" class="col text-center">
+                                <h1 class="text-white">Fajr</h1>
+                                <span id="sun"></span>
+                            </div>
+                            <hr />
+                            <div class="text-center">
+                                previous salah:
+                                <span class="salah-marker"></span>
+                                <span class="salah-marker"></span>
+                                <span class="salah-marker salah-qadha"></span>
+                                <span class="salah-marker salah-segregate"></span>
+                                <span class="salah-marker salah-congregate"></span>
+                                <span class="salah-marker salah-congregate"></span>
+                                <span class="salah-marker salah-qadha"></span>
+                            </div>
+                        </div>
+                        <div class="button-bar main-selection">
+                            <a class="button segregate">
+                                <span class="ion-man"></span><br />
+                                Segregate
+                            </a>
+                            <a class="button congregate">
+                                <span class="ion-man"></span><span class="ion-man"></span><span class="ion-man"></span><br />
+                                Congregate
+                            </a>
+                            <a class="button qadha" ui-sref="app.login">
+                                <span class="ion-clock"></span><br />
+                                Qadhah
+                            </a>
+                        </div>
+                    </div>
+
+                </ion-content>
+                <!-- Main content, usually <ion-nav-view> -->
+            </ion-side-menu-content>
+        </ion-side-menus>
+
+
+
+    </ion-pane>
+
+      </ion-content>
+</ion-view>

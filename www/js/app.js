@@ -4,6 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
+
 .controller('ContentController', function ($scope, $ionicSideMenuDelegate) {
     $scope.showMessage = function () {
         alert('Report');
@@ -23,3 +24,28 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+
+    .state('app', {
+      abstract: true,
+      url: "/app",
+      templateUrl: "app/layout/menu-layout.html"
+    })
+
+    .state('app.teams', {
+      url: "/teams",
+      views: {
+        'mainContent': {
+          templateUrl: "app/teams/teams.html"
+        }
+      }
+    })
+
+
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/app');
+});
+
+

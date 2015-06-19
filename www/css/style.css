@@ -1,6 +1,10 @@
 ﻿body {
   background-color: #1f253d;
 }
+.back {
+  background-color: #1f253d;
+
+}
 #main-prayer-banner {
   background: #4d3c69;
   position: relative;

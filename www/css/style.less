@@ -1,0 +1,78 @@
+﻿@color-qadha: #e64c65;
+@color-congregate:#11a8ab;
+@color-segregate: #fcb150;
+@color-base:#1f253d;
+@color-card:#394264;
+@color-tabs:#50597b;
+@color-primary:#9099b7;
+
+body {
+   background-color:#1f253d;
+}
+
+#main-prayer-banner{
+    background:#4d3c69;
+    position:relative;
+    margin-right:-20px;
+}
+#sun{
+    font-size:5rem; color:#716498;background-color:#716498;display:block;margin:10px auto;border-radius:50%;
+    height:226px;
+    width:226px;
+    
+}
+.main-prayer-banner{
+
+}
+.salah-marker{width:16px;height:16px;border-radius:50%;border:3px solid @color-primary;display:inline-block;}
+.salah-qadha{
+    background:@color-qadha;
+    border:none;
+}
+.salah-segregate{
+    background:@color-segregate;
+    border:none;
+}
+.salah-congregate{
+    background:@color-congregate;
+    border:none;
+}
+
+.main-selection{
+
+    a.button{
+        height:170px;
+        display:inline-block;
+        border-top:6px solid @color-primary;
+    }
+    a{
+       
+        span{
+            font-size:3rem;
+            display:inline-block;
+            height:50px;
+            padding-top:35px;
+        }
+    }
+    a.activated{
+        color:white;
+    }
+    a.segregate{
+        border-color:@color-segregate;
+    }
+    a.segregate.activated{
+        background-color:@color-segregate;
+    }
+    a.congregate{
+        border-color:@color-congregate;
+    }
+    a.congregate.activated{
+        background-color:@color-congregate;
+    }
+    a.qadha{
+        border-color:@color-qadha;
+    }
+    a.qadha.activated{
+        background-color:@color-qadha;
+    }
+}

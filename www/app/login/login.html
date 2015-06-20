@@ -1,15 +1,23 @@
 <ion-view ng-controller="ListCtrl">
-<ion-content>
-	<div ng-hide="authData" class="card" ng-click="login()">
-  <button class="item">
-  Log In with Facebook
-  </button>
-</div>
-<div class="card" ng-show="authData">
-  <div class="item item-text-wrap">
-    Hello {{authData.facebook.displayName}}!
-  </div>
-</div>
-</ion-content>
-      
+    <ion-content>
+
+        <div class="text-center">
+            <h1  class="app-title"style="color:white;">wePray</h1>
+            <h3 class="subtitle" style="color:white;">Towards Success</h3>
+        </div>
+        <div ng-hide="authData" class="card" ng-click="login()">
+            <div class="item item-text-wrap text-center" >
+                <button class="button button-positive">
+                    Log In with Facebook
+                </button>
+            </div>
+
+        </div>
+        <div class="card" ng-show="authData">
+            <div class="item item-text-wrap">
+                Hello {{authData.facebook.displayName}}!
+            </div>
+        </div>
+    </ion-content>
+
 </ion-view>

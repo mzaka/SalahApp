@@ -1,5 +1,6 @@
 ﻿@color-qadha: #e64c65;
 @color-congregate:#11a8ab;
+@color-navbar:#11a8ab;
 @color-segregate: #fcb150;
 @color-base:#1f253d;
 @color-card:#394264;
@@ -9,20 +10,71 @@
 body {
    background-color:#1f253d;
 }
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+.bar.bar-positive{
+    background-color:@color-navbar;
+}
+.bar-positive .button{
+    background-color:@color-navbar;
+    border-color:@color-navbar;
+}
 
+.pane, .view{
+    background-color:@color-base;
+}
+
+.card, .list-inset{background-color:@color-card; border-radius:10px;}
+.item{
+    background-color:@color-card;
+    h1{color:white;}
+    h2{color:@color-primary;}
+}
+    
 #main-prayer-banner{
-    background:#4d3c69;
+    /*background:#4d3c69;*/
     position:relative;
     margin-right:-20px;
-}
+    left:-16px;
+    width:110%;
+    overflow:hidden;
+    height:229px;
 #sun{
     font-size:5rem; color:#716498;background-color:#716498;display:block;margin:10px auto;border-radius:50%;
-    height:226px;
-    width:226px;
-    
+    height:229px;
+    width:229px;
+    position:absolute;
+    bottom:-150px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
 }
-.main-prayer-banner{
+#sun.fajr{
+    background-color:#f7ef77;
+}
+h1{
+    font-size:34.43pt;
+    margin-top:30px;
+}
 
+}
+.pan{
+    padding:20px;
+    color:white;
+}
+.goal{font-size:19.99pt;}
+#main-prayer-banner.fajr{
+  background: #c88850; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #c88850 1%, #4e3b69 55%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#c88850), color-stop(55%,#4e3b69)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #c88850 1%,#4e3b69 55%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #c88850 1%,#4e3b69 55%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #c88850 1%,#4e3b69 55%); /* IE10+ */
+background: radial-gradient(ellipse at 50% 100%,  #c88850 1%,#4e3b69 55%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c88850', endColorstr='#4e3b69',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ background-position-y:80%;
 }
 .salah-marker{width:16px;height:16px;border-radius:50%;border:3px solid @color-primary;display:inline-block;}
 .salah-qadha{
@@ -41,9 +93,16 @@ body {
 .main-selection{
 
     a.button{
-        height:170px;
+        height:150px;
         display:inline-block;
+        border:0 solid;
         border-top:6px solid @color-primary;
+        background-color:@color-tabs;
+        color:@color-primary;
+        border-right:1px solid @color-primary;
+    }
+    .button:last-child{
+         border-right-width:0;
     }
     a{
        

@@ -26,7 +26,7 @@ angular.module('starter', ['ionic','firebase'])
 }])
 
 .factory("Auth", function($firebaseAuth) {
-  var usersRef = new Firebase("https://fbzakalogin.firebaseio.com");
+  var usersRef = new Firebase("https://radiant-inferno-52.firebaseio.com/");
   return $firebaseAuth(usersRef);
 })
 
@@ -59,7 +59,6 @@ Auth.$onAuth(function(authData) {
     console.log("Logged in as", authData.uid);
   }
   $scope.authData = authData; // This will display the user's name in our view
-  $rootScope.authData = authData;
 });
 
   $scope.addItem = function(){

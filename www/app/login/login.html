@@ -5,10 +5,16 @@
   Log In with Facebook
   </button>
 </div>
+<button ng-click="logout()">Log Out</button>
 <div class="card" ng-show="authData">
   <div class="item item-text-wrap">
-    Hello {{authData.facebook.displayName}}!
+    Hello {{authData.facebook.displayName}}!<br>
+    Id {{authData.facebook.id}}!<br>
+    Username {{authData.facebook}}!<br>
+
+    
   </div>
+
 </div>
 </ion-content>
       

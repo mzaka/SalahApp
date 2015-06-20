@@ -52,6 +52,8 @@ angular.module('starter', ['ionic','firebase'])
     });
 };
 
+
+
 Auth.$onAuth(function(authData) {
   if (authData === null) {
     console.log("Not logged in yet");
@@ -60,6 +62,11 @@ Auth.$onAuth(function(authData) {
   }
   $scope.authData = authData; // This will display the user's name in our view
 });
+
+$scope.logout = function() {
+  var usersRef = new Firebase("https://fbzakalogin.firebaseio.com");
+    usersRef.unauth();
+  };
 
   $scope.addItem = function(){
     var name = prompt("What do you need to buy ?")

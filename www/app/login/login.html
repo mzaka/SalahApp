@@ -2,13 +2,19 @@
     <ion-content>
 
         <div class="text-center">
-            <h1  class="app-title"style="color:white;">wePray</h1>
+            <h1 class="app-title" style="color:white;">wePray</h1>
             <h3 class="subtitle" style="color:white;">Towards Success</h3>
         </div>
         <div ng-hide="authData" class="card" ng-click="login()">
-            <div class="item item-text-wrap text-center" >
-                <button class="button button-positive">
-                    Log In with Facebook
+            <div class="item item-text-wrap text-center">
+                <p>
+                    Sign in this app with
+                </p>
+                <button class="btn btn-facebook btn-3d btn-login ion-social-facebook">
+                    Facebook
+                </button>
+                <button class="btn btn-twitter btn-3d btn-login ion-social-twitter">
+                    Twitter
                 </button>
             </div>
 

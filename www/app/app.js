@@ -19,14 +19,14 @@ angular.module('starter', ['ionic','firebase'])
 })
 
 .factory('Items', ['$firebaseArray', function($firebaseArray){
-  var itemRef = new Firebase('https://resplendent-heat-9068.firebaseio.com/')
+  var itemRef = new Firebase('https://radiant-inferno-52.firebaseio.com/')
   return $firebaseArray(itemRef);
     
   
 }])
 
 .factory("Auth", function($firebaseAuth) {
-  var usersRef = new Firebase("https://fbzakalogin.firebaseio.com");
+  var usersRef = new Firebase("https://radiant-inferno-52.firebaseio.com/");
   return $firebaseAuth(usersRef);
 })
 
@@ -86,8 +86,73 @@ Auth.$onAuth(function(authData) {
     }
 })
     
+.controller('DashboardCtrl', function($scope, TrackItems) {
+
+    $scope.items = TrackItems;
+
+    //ion-list options setting    
+    $scope.shouldShowDelete = false;
+    $scope.shouldShowReorder = false;
+    $scope.listCanSwipe = true;
+
+    // onSuccess Callback
+    // This method accepts a Position object, which contains the
+    // current GPS coordinates
+    //
+    var onSuccess = function(position) {
+            $scope.lat = position.coords.latitude;
+            $scope.lng = position.coords.longitude;
+            console.log("Latitude: " + $scope.lat + " | Longitude: " + $scope.lng); 
+
+            prayTimes.setMethod('ISNA');
+            $scope.prayTimesToday = prayTimes.getTimes(new Date(), [$scope.lat, $scope.lng], +4);
+            console.log($scope.prayTimesToday);
+
+            $scope.$digest();
+    };
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+    $scope.markSalah = function(date, prayer_name, performed_as) {
+
+      //check if entry already available
+
+      //1st if the user data for the day is available
 
 
+      //2nd if yes, modify if no, add new
+      $scope.addNewItem = function() {
+        var _userId = '123456';//$rootScope.authData.uid;
+        var _date = date;
+        var _data = {};
+        _data[prayer_name] = {
+              "performed_as": performed_as,
+              "prayed_sunnah": "true"
+        };
+
+        $scope.items.$add({
+          "userId": _userId,
+          "date": _date,
+          "data": _data
+        });
+
+      };
+
+      $scope.addNewItem();
+    }
+})
+
+.factory("TrackItems", function($firebaseArray) {
+  var trackItemsRef = new Firebase("https://radiant-inferno-52.firebaseio.com/track");
+  return $firebaseArray(trackItemsRef);
+})
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider

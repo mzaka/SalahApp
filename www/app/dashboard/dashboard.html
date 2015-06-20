@@ -1,6 +1,124 @@
-<ion-view >
+<ion-view ng-controller="DashboardCtrl">
 <ion-content>
-	This is Dashboard 
+        <div class="text-center">
+            <h1  class="app-title"style="color:white;">wePray</h1>
+            <h3 class="subtitle" style="color:white;">Towards Success</h3>
+        </div>
+
+<ion-list
+          show-delete="shouldShowDelete"
+          show-reorder="shouldShowReorder"
+          can-swipe="listCanSwipe">
+  <ion-item class="item-thumbnail-left">
+
+    <img ng-src="{{prayTimesToday.img}}">
+    <h2>Fajr</h2>
+    <p>{{prayTimesToday.fajr}}</p>
+    <ion-option-button class="button-positive"
+                       ng-click="markSalah('06/20/2015', 'fajr', 'segregation')">
+      Segr
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="markSalah('06/20/2015', 'fajr', 'congregation')">
+      Cong
+    </ion-option-button>
+	<ion-option-button class="button-danger"
+	               ng-click="markSalah('06/20/2015', 'fajr', 'qadha')">
+		Qadha
+	</ion-option-button>
+
+    <!--To be used in Qadha and Missed screens
+    <ion-delete-button class="ion-minus-circled"
+                       ng-click="items.splice($index, 1)">
+    </ion-delete-button>
+    <ion-reorder-button class="ion-navicon"
+                        on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+    </ion-reorder-button>
+	-->
+
+  </ion-item>
+
+  <ion-item class="item-thumbnail-left">
+
+    <img ng-src="{{prayTimesToday.img}}">
+    <h2>Dhuhr</h2>
+    <p>{{prayTimesToday.dhuhr}}</p>
+    <ion-option-button class="button-positive"
+                       ng-click="markSalah('06/20/2015', 'dhuhr', 'segregation')">
+      Segr
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="markSalah('06/20/2015', 'dhuhr', 'congregation')">
+      Cong
+    </ion-option-button>
+	<ion-option-button class="button-danger"
+	               ng-click="markSalah('06/20/2015', 'dhuhr', 'qadha')">
+		Qadha
+	</ion-option-button>
+
+  </ion-item>
+
+    <ion-item class="item-thumbnail-left">
+
+    <img ng-src="{{prayTimesToday.img}}">
+    <h2>Asr</h2>
+    <p>{{prayTimesToday.asr}}</p>
+    <ion-option-button class="button-positive"
+                       ng-click="markSalah('06/20/2015', 'asr', 'segregation')">
+      Segr
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="markSalah('06/20/2015', 'asr', 'congregation')">
+      Cong
+    </ion-option-button>
+	<ion-option-button class="button-danger"
+	               ng-click="markSalah('06/20/2015', 'asr', 'qadha')">
+		Qadha
+	</ion-option-button>
+
+  </ion-item>
+
+    <ion-item class="item-thumbnail-left">
+
+    <img ng-src="{{prayTimesToday.img}}">
+    <h2>Maghrib</h2>
+    <p>{{prayTimesToday.maghrib}}</p>
+    <ion-option-button class="button-positive"
+                       ng-click="markSalah('06/20/2015', 'maghrib', 'segregation')">
+      Segr
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="markSalah('06/20/2015', 'maghrib', 'congregation')">
+      Cong
+    </ion-option-button>
+	<ion-option-button class="button-danger"
+	               ng-click="markSalah('06/20/2015', 'maghrib', 'qadha')">
+		Qadha
+	</ion-option-button>
+
+  </ion-item>
+
+    <ion-item class="item-thumbnail-left">
+
+    <img ng-src="{{prayTimesToday.img}}">
+    <h2>Isha</h2>
+    <p>{{prayTimesToday.isha}}</p>
+    <ion-option-button class="button-positive"
+                       ng-click="markSalah('06/20/2015', 'isha', 'segregation')">
+      Segr
+    </ion-option-button>
+    <ion-option-button class="button-info"
+                       ng-click="markSalah('06/20/2015', 'isha', 'congregation')">
+      Cong
+    </ion-option-button>
+	<ion-option-button class="button-danger"
+	               ng-click="markSalah('06/20/2015', 'isha', 'qadha')">
+		Qadha
+	</ion-option-button>
+
+  </ion-item>
+</ion-list>
+ 
 </ion-content>
       
 </ion-view>

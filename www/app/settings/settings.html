@@ -1,0 +1,17 @@
+<ion-view title="Settings" ng-controller="ListCtrl">
+<ion-content>
+
+<button class="item" ng-click="logout()">Log Out</button>
+<div class="card" ng-show="authData">
+  <div class="item item-text-wrap">
+    Hello {{authData.facebook.displayName}}!<br>
+    Id {{authData.facebook.id}}!<br>
+    <img src="{{authData.facebook.cachedUserProfile.picture.data.url}}"/><br>
+
+    
+  </div>
+
+</div>
+</ion-content>
+      
+</ion-view>

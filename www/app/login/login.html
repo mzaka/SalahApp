@@ -1,4 +1,5 @@
-<ion-view ng-controller="ListCtrl">
+<ion-view title="Login Page"  ng-controller="ListCtrl">
+
 <ion-content>
 	<div ng-hide="authData" class="card" ng-click="login()">
   <button class="item">
@@ -10,7 +11,7 @@
   <div class="item item-text-wrap">
     Hello {{authData.facebook.displayName}}!<br>
     Id {{authData.facebook.id}}!<br>
-    Username {{authData.facebook}}!<br>
+    
 
     
   </div>

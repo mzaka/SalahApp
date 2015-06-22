@@ -32,7 +32,7 @@ angular.module('starter', ['ionic','firebase'])
 
 
 
-.controller('ListCtrl', function($scope,$ionicListDelegate, Items,Auth){
+.controller('ListCtrl', function($scope,$ionicListDelegate,$location, Items,Auth){
 
   $scope.items = Items;
 
@@ -44,6 +44,7 @@ angular.module('starter', ['ionic','firebase'])
           // User successfully logged in. We can log to the console
           // since we’re using a popup here
           console.log(authData);
+          $location.path('/app/settings').replace();
         });
       } else {
         // Another error occurred
@@ -61,6 +62,7 @@ Auth.$onAuth(function(authData) {
     console.log("Logged in as", authData.uid);
   }
   $scope.authData = authData; // This will display the user's name in our view
+
 });
 
 $scope.logout = function() {
@@ -128,6 +130,14 @@ $scope.logout = function() {
       views: {
         'mainContent': {
           templateUrl: "app/dashboard/dashboard.html"
+        }
+      }
+    })
+    .state('app.settings', {
+      url: "/settings",
+      views: {
+        'mainContent': {
+          templateUrl: "app/settings/settings.html"
         }
       }
     });

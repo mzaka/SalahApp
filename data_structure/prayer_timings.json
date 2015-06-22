@@ -1,0 +1,40 @@
+[{
+	"greg_date":"06/18/2015",
+	"hijri_date":"09/01/1436",
+	"fajr": "4:09",
+	"sunrise": "5:29",
+	"dhuhur":"12:24",
+	"asr":"3:47",
+	"maghrib":"7:14",
+	"isha":"8:44"
+},
+{
+	"greg_date":"06/19/2015",
+	"hijri_date":"09/02/1436",
+	"fajr": "4:09",
+	"sunrise": "5:29",
+	"dhuhur":"12:24",
+	"asr":"3:48",
+	"maghrib":"7:14",
+	"isha":"8:44"
+},
+{
+	"greg_date":"06/20/2015",
+	"hijri_date":"09/03/1436",
+	"fajr": "4:09",
+	"sunrise": "5:29",
+	"dhuhur":"12:24",
+	"asr":"3:48",
+	"maghrib":"7:14",
+	"isha":"8:44"
+},
+{
+	"greg_date":"06/21/2015",
+	"hijri_date":"09/04/1436",
+	"fajr": "4:10",
+	"sunrise": "5:30",
+	"dhuhur":"12:24",
+	"asr":"3:49",
+	"maghrib":"7:15",
+	"isha":"8:45"
+}]

@@ -31,7 +31,7 @@ angular.module('starter', ['ionic'])
     .state('app', {
       abstract: true,
       url: "/app",
-      templateUrl: "app/layout/menu-layout.html"
+      templateUrl: "app/layout/mainview.html"
     })
 
     .state('app.teams', {
